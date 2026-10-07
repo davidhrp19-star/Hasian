@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #120b0d;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            rgba(18, 11, 13, .65),
+            rgba(18, 11, 13, .9)
+        ),
+        url("images/foto1.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+    transition: 1s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.small-text {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: .8;
+}
+
+.intro h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(60px, 12vw, 110px);
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.intro h1 span {
+    font-size: 35px;
+}
+
+.intro-text {
+    opacity: .8;
+    margin-bottom: 35px;
+}
+
+button {
+    border: 1px solid rgba(255,255,255,.5);
+    background: rgba(255,255,255,.08);
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+    background: white;
+    color: #120b0d;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+#mainContent {
+    display: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(20,10,12,.3),
+            rgba(20,10,12,.85)
+        ),
+        url("images/foto1.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 70px 8%;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle,
+.section-label {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 9vw, 105px);
+    line-height: .9;
+    font-weight: 500;
+
+    margin: 20px 0 10px;
+}
+
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.hero p {
+    max-width: 500px;
+    margin-top: 20px;
+    line-height: 1.8;
+    opacity: .85;
+}
+
+.scroll {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.scroll span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: .6;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    max-width: 900px;
+    margin: auto;
+    padding: 130px 25px;
+    text-align: center;
+}
+
+.story h2,
+.gallery h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 7vw, 75px);
+    font-weight: 500;
+    line-height: 1;
+    margin: 25px 0 35px;
+}
+
+.story-text {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 2;
+    color: #d6c9ca;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 50px 30px 130px;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.photo-card {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+
+    transition: transform 1s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+.photo-text span {
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: .6;
+}
+
+.photo-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 65px;
+    line-height: .95;
+    font-weight: 500;
+
+    margin: 20px 0;
+}
+
+.photo-text p {
+    line-height: 1.9;
+    color: #d6c9ca;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    background: #1c1013;
+    padding: 130px 25px;
+    text-align: center;
+}
+
+.letter-box {
+    max-width: 750px;
+    margin: 50px auto 0;
+
+    padding: 60px 40px;
+
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.025);
+}
+
+.letter-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.letter-box p {
+    line-height: 2;
+    color: #d6c9ca;
+    margin: 20px 0;
+}
+
+.love-final {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    color: white !important;
+    margin-top: 40px !important;
+}
+
+.signature {
+    margin-top: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    padding: 130px 30px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 60px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    transition: .5s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(.98);
+}
+
+
+/* =========================
+   ANNIVERSARY
+========================= */
+
+.anniversary {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #3b1d24,
+            #120b0d 70%
+        );
+
+    padding: 50px;
+}
+
+.anniversary h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 9vw, 100px);
+    font-weight: 500;
+
+    margin: 20px 0;
+}
+
+.anniversary p {
+    opacity: .7;
+}
+
+.heart-big {
+    font-size: 70px;
+    margin: 40px 0;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.anniversary h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+
+    background: #0d0809;
+
+    color: #bcaeb0;
+}
+
+footer small {
+    display: block;
+    margin-top: 10px;
+    opacity: .5;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 700px) {
+
+    .hero {
+        padding: 40px 25px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .photo-section {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 40px 20px 100px;
+    }
+
+    .photo-text h2 {
+        font-size: 50px;
+    }
+
+    .letter-box {
+        padding: 40px 25px;
+    }
+
+    .letter-box h2 {
+        font-size: 45px;
+    }
+
+    .gallery {
+        padding: 100px 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 450px;
+    }
+
+}
